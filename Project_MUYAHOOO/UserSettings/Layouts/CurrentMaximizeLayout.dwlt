@@ -26,7 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 112}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 15
+  controlID: 24
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 1
+  m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 16
+  controlID: 25
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -680,9 +680,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -0.041067377, y: -0.12786709, z: -9.903057}
+    m_Target: {x: -6.457493, y: 4.0658484, z: -0.060737137}
     speed: 2
-    m_Value: {x: -0.041067377, y: -0.12786709, z: -9.903057}
+    m_Value: {x: -6.457493, y: 4.0658484, z: -0.060737137}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -732,9 +732,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.4303257
+    m_Target: 11.099668
     speed: 2
-    m_Value: 2.4303257
+    m_Value: 11.099668
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -865,13 +865,11 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -2634
-      - m_Data: -2356
       - m_Data: -1316
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Square
+        m_OriginalName: Square
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
@@ -879,10 +877,10 @@ MonoBehaviour:
           width: 0
           height: 0
         m_UserData:
-          m_Data: 0
+          m_Data: 49824
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 7}
@@ -917,7 +915,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 70
+  controlID: 107
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -1016,18 +1014,23 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 50122
-    - m_Data: 50124
-    - m_Data: 50126
-    - m_Data: 50128
-    - m_Data: 50130
-    - m_Data: 50132
-    - m_Data: 50134
-    - m_Data: 50136
-    - m_Data: 50138
-    - m_Data: 50140
-    - m_Data: 50142
-    - m_Data: 50144
+    - m_Data: 49904
+    - m_Data: 49906
+    - m_Data: 49908
+    - m_Data: 49910
+    - m_Data: 49912
+    - m_Data: 49914
+    - m_Data: 49916
+    - m_Data: 49918
+    - m_Data: 49920
+    - m_Data: 49922
+    - m_Data: 49924
+    - m_Data: 49926
+    - m_Data: 49928
+    - m_Data: 49930
+    - m_Data: 49932
+    - m_Data: 49934
+    - m_Data: 49936
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1060,28 +1063,27 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 50122
-    - m_Data: 50124
-    - m_Data: 50126
-    - m_Data: 50128
-    - m_Data: 50130
-    - m_Data: 50132
-    - m_Data: 50134
-    - m_Data: 50136
-    - m_Data: 50138
-    - m_Data: 50140
-    - m_Data: 50142
-    - m_Data: 50144
-    - m_Data: 50444
-    - m_Data: 50740
-    - m_Data: 50768
-    - m_Data: 50796
-    - m_Data: 50876
-    - m_Data: 50956
+    - m_Data: 49904
+    - m_Data: 49906
+    - m_Data: 49908
+    - m_Data: 49910
+    - m_Data: 49912
+    - m_Data: 49914
+    - m_Data: 49916
+    - m_Data: 49918
+    - m_Data: 49920
+    - m_Data: 49922
+    - m_Data: 49924
+    - m_Data: 49926
+    - m_Data: 49928
+    - m_Data: 49930
+    - m_Data: 49932
+    - m_Data: 49934
+    - m_Data: 49936
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PlayerMove
-      m_OriginalName: PlayerMove
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
@@ -1089,10 +1091,10 @@ MonoBehaviour:
         width: 0
         height: 0
       m_UserData:
-        m_Data: 50984
+        m_Data: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 10}
@@ -1156,8 +1158,8 @@ MonoBehaviour:
     y: 894
     width: 367
     height: 447
-  m_MinSize: {x: 52, y: 76}
-  m_MaxSize: {x: 4002, y: 4026}
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
