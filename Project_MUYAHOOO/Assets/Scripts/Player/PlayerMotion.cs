@@ -2,11 +2,28 @@ using UnityEngine;
 
 public class PlayerMotion : MonoBehaviour
 {
+    [SerializeField] GameObject body;
     Animator anim;
+    SpriteRenderer spriteRenderer;
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = body.GetComponent<Animator>();
+        spriteRenderer = body.GetComponent<SpriteRenderer>();
+    }
+
+    public void Flip(float value)
+    {
+        if(value == 0) return;
+        spriteRenderer.flipX = value<0;
+    }
+    public void PlayAnim(string parameter,int layer,float percent)
+    {
+        anim.Play(parameter,layer,percent);
+    }
+    public void ResetTriggerParameter(string parameter)
+    {
+        anim.ResetTrigger(parameter);
     }
     public void SetTriggerParameter(string parameter)
     {

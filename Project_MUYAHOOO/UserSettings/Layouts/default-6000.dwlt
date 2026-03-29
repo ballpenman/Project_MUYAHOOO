@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 112}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 22015
+  controlID: 26
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 22016
+  controlID: 27
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: AnimatorControllerTool
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -168,14 +168,14 @@ MonoBehaviour:
     y: 0
     width: 1210
     height: 670
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,8 +195,8 @@ MonoBehaviour:
     y: 670
     width: 1210
     height: 671
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -222,8 +222,8 @@ MonoBehaviour:
     y: 0
     width: 411
     height: 1341
-  m_MinSize: {x: 202, y: 226}
-  m_MaxSize: {x: 4002, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 22060
+  controlID: 71
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -300,8 +300,8 @@ MonoBehaviour:
     y: 894
     width: 314
     height: 447
-  m_MinSize: {x: 51, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -326,8 +326,8 @@ MonoBehaviour:
     y: 0
     width: 625
     height: 1341
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -1199,9 +1199,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -1.0304862, y: 0.069929376, z: -3.7383037}
+    m_Target: {x: -0.33652923, y: -0.46161842, z: -3.7387683}
     speed: 2
-    m_Value: {x: -1.0304862, y: 0.069929376, z: -3.7383037}
+    m_Value: {x: -0.33652923, y: -0.46161842, z: -3.7387683}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1251,9 +1251,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.1930578
+    m_Target: 2.2392874
     speed: 2
-    m_Value: 2.1930578
+    m_Value: 2.2392874
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1447,21 +1447,8 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -26064
-      - m_Data: -22940
-      - m_Data: -20814
-      - m_Data: -19012
       - m_Data: -1316
-      - m_Data: 49820
-      - m_Data: 52080
-      - m_Data: 52320
-      - m_Data: 52866
-      - m_Data: 53900
-      - m_Data: 54424
-      - m_Data: 56300
-      - m_Data: 56792
-      - m_Data: 57122
-      - m_Data: 57302
+      - m_Data: 49832
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1536,7 +1523,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Sprites/Player/Idle
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1558,32 +1545,32 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 49914
-    - m_Data: 49916
-    - m_Data: 49918
-    - m_Data: 49920
-    - m_Data: 49922
-    - m_Data: 49924
-    - m_Data: 49926
-    - m_Data: 49928
-    - m_Data: 49930
-    - m_Data: 49932
-    - m_Data: 49934
-    - m_Data: 49936
-    - m_Data: 49938
-    - m_Data: 49940
-    - m_Data: 49942
-    - m_Data: 49944
-    - m_Data: 49946
-    - m_Data: 49948
-    - m_Data: 50936
-    - m_Data: 50958
-    - m_Data: 50962
-    - m_Data: 50964
-    - m_Data: 50966
-    - m_Data: 50978
-    - m_Data: 54088
-    - m_Data: 57564
+    - m_Data: 49950
+    - m_Data: 49952
+    - m_Data: 49954
+    - m_Data: 49956
+    - m_Data: 49958
+    - m_Data: 49960
+    - m_Data: 49962
+    - m_Data: 49964
+    - m_Data: 49966
+    - m_Data: 49968
+    - m_Data: 49970
+    - m_Data: 49972
+    - m_Data: 49974
+    - m_Data: 49976
+    - m_Data: 49978
+    - m_Data: 49980
+    - m_Data: 49982
+    - m_Data: 49984
+    - m_Data: 49986
+    - m_Data: 49988
+    - m_Data: 49990
+    - m_Data: 49992
+    - m_Data: 49994
+    - m_Data: 49996
+    - m_Data: 49998
+    - m_Data: 50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1616,32 +1603,51 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 49914
-    - m_Data: 49916
-    - m_Data: 49918
-    - m_Data: 49920
-    - m_Data: 49922
-    - m_Data: 49924
-    - m_Data: 49926
-    - m_Data: 49928
-    - m_Data: 49930
-    - m_Data: 49932
-    - m_Data: 49934
-    - m_Data: 49936
-    - m_Data: 49938
-    - m_Data: 49940
-    - m_Data: 49942
-    - m_Data: 49944
-    - m_Data: 49946
-    - m_Data: 49948
-    - m_Data: 50936
-    - m_Data: 50958
-    - m_Data: 50962
-    - m_Data: 50964
-    - m_Data: 50966
-    - m_Data: 50978
-    - m_Data: 54088
-    - m_Data: 57564
+    - m_Data: 49950
+    - m_Data: 49952
+    - m_Data: 49954
+    - m_Data: 49956
+    - m_Data: 49958
+    - m_Data: 49960
+    - m_Data: 49962
+    - m_Data: 49964
+    - m_Data: 49966
+    - m_Data: 49968
+    - m_Data: 49970
+    - m_Data: 49972
+    - m_Data: 49974
+    - m_Data: 49976
+    - m_Data: 49978
+    - m_Data: 49980
+    - m_Data: 49982
+    - m_Data: 49984
+    - m_Data: 49986
+    - m_Data: 49988
+    - m_Data: 49990
+    - m_Data: 49992
+    - m_Data: 49994
+    - m_Data: 49996
+    - m_Data: 49998
+    - m_Data: 50000
+    - m_Data: 50488
+    - m_Data: 50492
+    - m_Data: 50506
+    - m_Data: 50510
+    - m_Data: 50514
+    - m_Data: 50518
+    - m_Data: 50522
+    - m_Data: 50526
+    - m_Data: 50532
+    - m_Data: 50640
+    - m_Data: 50680
+    - m_Data: 50684
+    - m_Data: 50688
+    - m_Data: 50692
+    - m_Data: 50696
+    - m_Data: 50700
+    - m_Data: 50716
+    - m_Data: 50720
+    - m_Data: 50724
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -21,10 +21,13 @@ public class PlayerMove : MonoBehaviour
     bool grounded => groundHit;
     RaycastHit2D groundHit;
 
+    PlayerMotion motion;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        motion = GetComponent<PlayerMotion>();
         var playerMap = inputAsset.FindActionMap("Player");
         moveAction = playerMap.FindAction("Move");
         jumpAction = playerMap.FindAction("Jump");
@@ -32,23 +35,31 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         groundHit = Physics2D.Raycast(transform.position, Vector2.down, 1.5f, LayerMask.GetMask("Platform"));
+        motion.SetBoolParameter("isGrounded", grounded);
+
+        motion.SetBoolParameter("isFalling", rb.linearVelocityY < 0 && !grounded);
     }
     public void Move()
     {
         Vector2 _vector = moveAction.ReadValue<Vector2>() * Vector2.right;
         
+        motion.SetBoolParameter("isMove", _vector.x != 0);
+        motion.Flip(_vector.x);
+
         if (jumpAction.ReadValue<float>() == 0 && groundHit && groundHit.normal != Vector2.up)
         {
             //경사로
-            if (_vector.x == 0)
+            motion.SetBoolParameter("isSlope", true);
+            if (groundHit && _vector.x == 0)
                 rb.gravityScale = 0;
-                _vector = Vector3.ProjectOnPlane(_vector, groundHit.normal).normalized;
+            _vector = Vector3.ProjectOnPlane(_vector, groundHit.normal).normalized;
             rb.linearVelocityX = _vector.x * moveForce;
             rb.linearVelocityY = _vector.y * moveForce;
         }
         else
         {
             //경사로를 벗어났을 때
+            motion.SetBoolParameter("isSlope", false);
             rb.gravityScale = initGravityScale;
             rb.linearVelocityX = _vector.x * moveForce;
         }
@@ -58,6 +69,8 @@ public class PlayerMove : MonoBehaviour
     {
         if (jumpCount>0 && canPressJump && jumpAction.ReadValue<float>() == 1) {
             jumpCount--;
+            motion.SetTriggerParameter("Jump");
+            motion.PlayAnim("PlayerJump", -1, 0f);
             rb.linearVelocityY = 0f;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             canPressJump = false;
