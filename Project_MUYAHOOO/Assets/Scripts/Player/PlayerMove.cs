@@ -42,24 +42,29 @@ public class PlayerMove : MonoBehaviour
     public void Move()
     {
         Vector2 _vector = moveAction.ReadValue<Vector2>() * Vector2.right;
-        
+        int flipValue = motion.spriteRenderer.flipX ? -1 : 1;
+
         motion.SetBoolParameter("isMove", _vector.x != 0);
         motion.Flip(_vector.x);
-
+        Debug.Log(Vector2.Angle(groundHit.normal, Vector2.up) * flipValue);
         if (jumpAction.ReadValue<float>() == 0 && groundHit && groundHit.normal != Vector2.up)
         {
             //°æ»ç·Î
             motion.SetBoolParameter("isSlope", true);
             if (groundHit && _vector.x == 0)
                 rb.gravityScale = 0;
+            
             _vector = Vector3.ProjectOnPlane(_vector, groundHit.normal).normalized;
+
+            motion.SetFloatParameter("PlatformAngle", Vector2.Angle(groundHit.normal, Vector2.up) * flipValue);
             rb.linearVelocityX = _vector.x * moveForce;
             rb.linearVelocityY = _vector.y * moveForce;
         }
         else
         {
-            //°æ»ç·Î¸¦ ¹þ¾î³µÀ» ¶§
+            //°æ»ç·Î¸¦ ¹þ¾î³µÀ» ¶§a
             motion.SetBoolParameter("isSlope", false);
+            motion.SetFloatParameter("PlatformAngle", 0);
             rb.gravityScale = initGravityScale;
             rb.linearVelocityX = _vector.x * moveForce;
         }

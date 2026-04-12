@@ -4,7 +4,7 @@ public class PlayerMotion : MonoBehaviour
 {
     [SerializeField] GameObject body;
     Animator anim;
-    SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer { get; private set; }
 
     private void Start()
     {
