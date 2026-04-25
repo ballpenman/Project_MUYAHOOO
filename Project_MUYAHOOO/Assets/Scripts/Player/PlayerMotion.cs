@@ -37,4 +37,9 @@ public class PlayerMotion : MonoBehaviour
     {
         anim.SetFloat(parameter,value);
     }
+
+    public void RotateBody(float angle)
+    {
+        body.transform.rotation = Quaternion.Lerp(body.transform.rotation, Quaternion.Euler(0, 0, angle), Time.deltaTime * 5f);
+    }
 }
